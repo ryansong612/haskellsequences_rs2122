@@ -20,17 +20,13 @@ maxOf3 x y z
 -- Returns True if the character represents a digit '0'..'9';
 -- False otherwise
 isADigit :: Char -> Bool
-isADigit a
-  | ord(a) >= 48 && ord(a) <= 57 = True
-  | otherwise = False
+isADigit a = ord(a) >= 48 && ord(a) <= 57
 
 -- Returns True if the character represents an alphabetic
 -- character either in the range 'a'..'z' or in the range 'A'..'Z';
 -- False otherwise
 isAlpha :: Char -> Bool
-isAlpha a
-  | (ord(a) >= 65 && ord(a) <= 90) || (ord(a)>= 97 && ord(a) <= 122) = True
-  | otherwise = False
+isAlpha a = (ord(a) >= 65 && ord(a) <= 90) || (ord(a)>= 97 && ord(a) <= 122)
 -- Returns the integer [0..9] corresponding to the given character.
 -- Note: this is a simpler version of digitToInt in module Data.Char,
 -- which does not assume the precondition.
